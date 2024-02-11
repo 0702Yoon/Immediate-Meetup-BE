@@ -34,7 +34,10 @@ public class Member {
     @Column(name = "profile_image")
     private String profileImage;
 
-    public void encodePassword(PasswordEncoder passwordEncoder){
+    @Column(name = "time_zone")
+    private String timeZone;
+
+    public void encodePassword(PasswordEncoder passwordEncoder) {
         this.password = passwordEncoder.encode(password);
     }
 }
